@@ -22,7 +22,7 @@ public class Day01 {
 		System.out.println("Paste puzzle input here...");
 		
 		Position position = new Position();
-		//Path     path     = new Path();
+		Path     path     = new Path();
 		
 		while (true) {
 			
@@ -37,19 +37,19 @@ public class Day01 {
 			for (String moveString: moveStrings) {
 				
 				position.move(moveString);
-				//path    .move(moveString);
+				path    .move(moveString);
 			}
 			
 		}
 		
 		// Print the solution(s)
 		System.out.println("Distance: " + position.getDistance());
-		//System.out.println("Crossing: " + path.getCrossingDistance());
+		System.out.println("Crossing: " + path.getCrossingDistance());
 		
 		// Print the path... in order for this to work properly, 
 		// the console size must be set to 1,000,000 characters.
 		// In eclipse Window->Preferences search for Console, and set the 
 		// Console buffer size to 1000000.
-		//path.printPath();
+		path.printPath();
 	}
 }
